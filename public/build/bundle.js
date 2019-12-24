@@ -453,8 +453,8 @@ var app = (function () {
     			t2 = text(/*count*/ ctx[0]);
     			t3 = space();
     			t4 = text(t4_value);
-    			add_location(hr, file, 8, 0, 90);
-    			add_location(button, file, 9, 0, 95);
+    			add_location(hr, file, 8, 0, 98);
+    			add_location(button, file, 9, 0, 103);
     			dispose = listen_dev(button, "click", /*increment*/ ctx[1], false, false, false);
     		},
     		l: function claim(nodes) {
@@ -498,7 +498,7 @@ var app = (function () {
     	let count = 0;
 
     	function increment() {
-    		$$invalidate(0, count++, count);
+    		$$invalidate(0, count = count + 2);
     	}
 
     	$$self.$capture_state = () => {
